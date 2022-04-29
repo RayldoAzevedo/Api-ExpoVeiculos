@@ -1,7 +1,9 @@
 package br.com.azevedo.rayldo.expo_veiculos.model;
 
+
 import javax.persistence.*;
 import java.util.Date;
+
 @Entity
 @Table(name = "veiculos")
 public class Veiculo {
@@ -22,7 +24,7 @@ public class Veiculo {
     @Column(name = "marca")
     private String  marca;
     @Column(name = "ano")
-    private Date    ano;
+    private Date ano;
     @Column(name = "cor")
     private String  cor;
     @Column(name = "categoria")
@@ -33,6 +35,8 @@ public class Veiculo {
     private String  sobre;
     @Column(name = "valorestimado")
     private float   valorEstimado;
+    
+    private byte[] photo;
 
 
     /**
@@ -126,4 +130,12 @@ public class Veiculo {
     public void setValorEstimado(float valorEstimado) {
         this.valorEstimado = valorEstimado;
     }
+
+	public byte[] getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(byte[] photo) {
+		this.photo = photo;
+	}
 }
