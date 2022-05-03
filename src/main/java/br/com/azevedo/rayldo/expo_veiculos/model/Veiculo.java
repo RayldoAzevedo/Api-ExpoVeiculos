@@ -2,6 +2,7 @@ package br.com.azevedo.rayldo.expo_veiculos.model;
 
 
 import javax.persistence.*;
+import java.io.File;
 import java.util.Date;
 
 @Entity
@@ -17,6 +18,18 @@ public class Veiculo {
     private Integer idVeiculo;
     @Column(name = "foto")
     private String  foto;
+
+    @Column(name = "iamgem")
+    private File image;
+
+    public File getImage() {
+        return image;
+    }
+
+    public void setImage(File image) {
+        this.image = image;
+    }
+
     @Column(name = "propritario")
     private String  proprietario;
     @Column(name = "modelo")

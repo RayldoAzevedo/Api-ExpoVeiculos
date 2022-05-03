@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
 import java.util.List;
 
 @RestController
@@ -46,14 +47,17 @@ public class VeiculoController {
     }
 
 
+
     /**
-     * Metodo para salvar Veiculo no banco de dados
+     * Metodo para INCLUIR VEICULO no banco
      * @param TODAS as informações do veiculo recebidas por parametro
      * @return Veiculo
      */
     @PostMapping(value= "incluir-veiculo")
+
     public Veiculo salvar(@RequestBody Veiculo veiculo) {
         try{
+
             if (veiculo.getIdVeiculo()==null){
                 veiculo = veiculoService.incluir(veiculo);
             }

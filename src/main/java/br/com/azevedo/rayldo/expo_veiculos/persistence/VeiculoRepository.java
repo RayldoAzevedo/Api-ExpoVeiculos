@@ -9,3 +9,4 @@ import org.springframework.data.repository.CrudRepository;
  * do Spring Data
  */
 public interface VeiculoRepository extends CrudRepository<Veiculo, Integer> {}
+
