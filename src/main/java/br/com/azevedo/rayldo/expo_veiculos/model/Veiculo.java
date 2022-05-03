@@ -16,20 +16,20 @@ public class Veiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idVeiculo;
+
+    /**
+     *ATRIBUTOS PARA TESTE COM IMAGEM
+     */
     @Column(name = "foto")
     private String  foto;
-
+    @Column(name="photo")
+    private byte[] photo;
     @Column(name = "iamgem")
     private File image;
 
-    public File getImage() {
-        return image;
-    }
-
-    public void setImage(File image) {
-        this.image = image;
-    }
-
+    /**
+     * DEMAIS ATRIBUTOS
+     */
     @Column(name = "propritario")
     private String  proprietario;
     @Column(name = "modelo")
@@ -49,19 +49,28 @@ public class Veiculo {
     @Column(name = "valorestimado")
     private float   valorEstimado;
     
-    private byte[] photo;
+
 
 
     /**
      * METODOS PUBLICOS
      *
      */
-    public Integer getIdVeiculo() {
-        return idVeiculo;
+
+    public byte[] getPhoto() {
+        return photo;
     }
 
-    public void setIdVeiculo(Integer idVeiculo) {
-        this.idVeiculo = idVeiculo;
+    public void setPhoto(byte[] photo) {
+        this.photo = photo;
+    }
+
+    public File getImage() {
+        return image;
+    }
+
+    public void setImage(File image) {
+        this.image = image;
     }
 
     public String getFoto() {
@@ -71,6 +80,16 @@ public class Veiculo {
     public void setFoto(String foto) {
         this.foto = foto;
     }
+
+
+    public Integer getIdVeiculo() {
+        return idVeiculo;
+    }
+
+    public void setIdVeiculo(Integer idVeiculo) {
+        this.idVeiculo = idVeiculo;
+    }
+
 
     public String getProprietario() {
         return proprietario;
@@ -144,11 +163,4 @@ public class Veiculo {
         this.valorEstimado = valorEstimado;
     }
 
-	public byte[] getPhoto() {
-		return photo;
-	}
-
-	public void setPhoto(byte[] photo) {
-		this.photo = photo;
-	}
 }
