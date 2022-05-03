@@ -1,5 +1,7 @@
 package br.com.azevedo.rayldo.expo_veiculos.service;
+
 import br.com.azevedo.rayldo.expo_veiculos.model.Veiculo;
+
 import java.util.List;
 
 public interface VeiculoService {

@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "", maxAge = 3600)
-@RequestMapping(value = "/")
 public class VeiculoController {
 
     private VeiculoService veiculoService;
@@ -33,6 +32,7 @@ public class VeiculoController {
     @GetMapping(value = "/listar-veiculos")
     public List<Veiculo> listar(){
         List <Veiculo> lista = veiculoService.listar();
+
         return lista;
     }
 
