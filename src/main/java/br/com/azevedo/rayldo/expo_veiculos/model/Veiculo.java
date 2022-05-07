@@ -14,19 +14,9 @@ public class Veiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idVeiculo;
+
     @Column(name = "foto")
     private String  foto;
-
-    @Column(name = "iamgem")
-    private File image;
-
-    public File getImage() {
-        return image;
-    }
-
-    public void setImage(File image) {
-        this.image = image;
-    }
 
     @Column(name = "propritario")
     private String  proprietario;
